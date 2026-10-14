@@ -1,0 +1,20 @@
+[project]
+name = "catalog-cleaner-env"
+version = "0.0.0"
+description = "Environment for catalog-cleaner (dependencies only)"
+requires-python = ">=3.11"
+dependencies = [
+    "typer>=0.12",
+    "httpx>=0.27",
+    "anthropic>=0.40",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
